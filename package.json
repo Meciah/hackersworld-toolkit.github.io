@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://hackersworld-toolkit.me/",
+  "homepage": "https://github.com/Meciah/hackersworld-toolkit.github.io",
   "engines": {
     "npm": ">=8.0.0 <9.0.0",
     "node": ">=16.0.0 <17.0.0"
@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^7.1.2",
     "atomicmarket": "^1.1.6",
     "chart.js": "^3.9.1",
-    "gh-pages": "^4.0.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^4.3.1",
     "react-dom": "^16.13.1",
@@ -44,5 +43,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
