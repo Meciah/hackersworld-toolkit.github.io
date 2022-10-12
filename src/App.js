@@ -156,7 +156,7 @@ let hwb = sendHWB().then((responseJSON) => {
     <div className="container">
 
       <a href="# " className="logo">
-        <img src="/favicon.png" width="32" height="32" alt="Cryptex logo"></img>
+        <img src="favicon.png" width="32" height="32" alt="Cryptex logo"></img>
 
       </a>
 
