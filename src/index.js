@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <HashRouter base="/">
+  <HashRouter base="http://hackersworld-toolkit.me/">
     <App />
   </HashRouter>,
   document.getElementById("root")
