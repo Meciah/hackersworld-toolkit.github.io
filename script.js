@@ -1,7 +1,7 @@
 'use strict';
 
 
-
+document.body.style.backgroundImage = "url('matrix.gif')";
 /**
  * add event on element
  */
