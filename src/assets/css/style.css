@@ -1648,8 +1648,8 @@ address.footer-contact-link { max-width: 30ch; }
   .header.active { top: -60px; }
 
   .header > .container { 
-    grid-gap: 0px !important;
-    gap: 0px !important;
+    grid-gap: 0rem !important;
+    gap: 0rem !important;
   }
 
   .nav-toggle-btn { display: none; }
@@ -1822,7 +1822,7 @@ address.footer-contact-link { max-width: 30ch; }
    * REUSED STYLE
    */
 
-  .container { max-width: 1600px; }
+  .container { max-width: 100%; }
 
 
 
