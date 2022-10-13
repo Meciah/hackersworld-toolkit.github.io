@@ -409,8 +409,8 @@ async function makeList(listData) {
   document.getElementById('listContainer').appendChild(total_WAX_day);
   total_WAX_day.innerHTML += ('WAX Per Day: ' + Math.round(((total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100))) * hwb_val),2))
 
-  let message = document.createElement('div');
-  document.getElementById('listContainer').appendChild(message);
+  let message = document.createElement('p');
+  document.getElementById('listContainerDiv').appendChild(message);
   message.innerHTML += '* Total Earnings Assumes the Base Multiplier of All Viruses is 100%, and there are no viruses installed on your system.'
 }
 

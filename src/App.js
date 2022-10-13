@@ -238,7 +238,9 @@ let hwb = sendHWB().then((responseJSON) => {
             <tbody id='listContainer'>
 
             </tbody>
+          
           </table>
+          <div id='listContainerDiv' className='listContainerDiv'> </div>
     </div>
   </article>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
