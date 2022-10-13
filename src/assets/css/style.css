@@ -469,7 +469,16 @@ input { border-style: none; background: transparent; outline: none; }
   gap: 10px;
 
 }
+@media  (max-width:993px) {
+  .header > .container{
+    display: block;
+  }
 
+  .header > .container .btn-outline {
+    float: right;
+    justify-content:end;
+  }
+}
 .logo {
   color: var(--white);
   font-size: 2.5rem;
@@ -491,7 +500,7 @@ input { border-style: none; background: transparent; outline: none; }
 .nav-toggle-btn {
   padding: 8px 5px;
   position: absolute;
-  left:70px;
+  left:20px;
   
 }
 
@@ -1064,12 +1073,13 @@ input { border-style: none; background: transparent; outline: none; }
 }
 .footer p {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 0px;
+  padding-left: 5px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.7;
   border-radius: 0;
-  color: white;
+  color: rgb(239, 239, 239);
 }
 
 
@@ -1628,7 +1638,11 @@ address.footer-contact-link { max-width: 30ch; }
 /**
  * responsive for larger than 992px screen
  */
-
+@media  (max-width:993px) {
+   .logo{
+    display: none;
+  }
+}
 @media (min-width: 992px) {
 
   /**
