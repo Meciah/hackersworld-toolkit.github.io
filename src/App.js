@@ -203,7 +203,7 @@ let hwb = sendHWB().then((responseJSON) => {
         <span className="line line-3"></span>
       </button>
 
-      <a href="# " className="btn btn-outline">Donate</a>
+      <a href="# " className="btn btn-outline">Donations :) --> 4r1fy.wam</a>
 
     </div>
   </header>
@@ -252,9 +252,7 @@ let hwb = sendHWB().then((responseJSON) => {
 
 
   <footer className="footer">
-
-    
-
+          <p>With &hearts; from Mekii</p>
   </footer>
 
 

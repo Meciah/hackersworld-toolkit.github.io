@@ -199,11 +199,23 @@ async function makeList(listData) {
   let access_pass = false
   let total_HWB_per_hour = 0
   let total_HWB_per_day = 0
+  let firewall_rarity = ''
+  let antivirus_rarity = ''
+  let cracker_rarity = ''
   //console.log(Object.keys(listData).length)
   //console.log(myArray.length)
   for (let i = 0;i<myArray.length;i++){
     if(myArray[i][1].schema_name === 'pass'){
       access_pass = true;
+    }
+    if(myArray[i][1].schema_name === 'firewall'){
+      firewall_rarity = myArray[i][1].template_id;
+    }
+    if(myArray[i][1].schema_name === 'antivirus'){
+      antivirus_rarity = myArray[i][1].template_id;
+    }
+    if(myArray[i][1].schema_name === 'cracker'){
+      cracker_rarity = myArray[i][1].template_id;
     }
   }
   for (let i = 0;i<myArray.length;i++){
@@ -241,6 +253,55 @@ async function makeList(listData) {
 
   }
   console.log(access_pass)
+  if (firewall_rarity == 583353){
+    firewall_rarity = 'Common'
+  }
+  if (firewall_rarity == 583354){
+    firewall_rarity = 'Uncommon'
+  }
+  if (firewall_rarity == 583355){
+    firewall_rarity = 'Rare'
+  }
+  if (firewall_rarity == 583356){
+    firewall_rarity = 'Epic'
+  }
+  if (firewall_rarity == 583357){
+    firewall_rarity = 'Legendary'
+  }
+
+  if (antivirus_rarity == 583343){
+    antivirus_rarity = 'Common'
+  }
+  if (antivirus_rarity == 583344){
+    antivirus_rarity = 'Uncommon'
+  }
+  if (antivirus_rarity == 583345){
+    antivirus_rarity = 'Rare'
+  }
+  if (antivirus_rarity == 583346){
+    antivirus_rarity = 'Epic'
+  }
+  if (antivirus_rarity == 583347){
+    antivirus_rarity = 'Legendary'
+  }
+
+  if (cracker_rarity == 583348){
+    cracker_rarity = 'Common'
+  }
+  if (cracker_rarity == 583349){
+    cracker_rarity = 'Uncommon'
+  }
+  if (cracker_rarity == 583350){
+    cracker_rarity = 'Rare'
+  }
+  if (cracker_rarity == 583351){
+    cracker_rarity = 'Epic'
+  }
+  if (cracker_rarity == 583352){
+    cracker_rarity = 'Legendary'
+  }
+
+
   if (access_pass == true){
     if(listArray.length == 5){
       slot_bonus = 0
@@ -391,23 +452,34 @@ async function makeList(listData) {
 
   let pass_staked = document.createElement('div');
   document.getElementById('listContainer').appendChild(pass_staked);
-  pass_staked.innerHTML += ('Access Pass Staked: ' + (access_pass ? '&#10004': '&#x2717') )
+  pass_staked.innerHTML += ('Access Pass Staked : ' + (access_pass ? '&#10004': '&#x2717') )
   
+  let firewall_staked = document.createElement('div');
+  document.getElementById('listContainer').appendChild(firewall_staked);
+  firewall_staked.innerHTML += ('Firewall : ' + firewall_rarity )
+
+  let antivirus_staked = document.createElement('div');
+  document.getElementById('listContainer').appendChild(antivirus_staked);
+  antivirus_staked.innerHTML += ('Antivirus : ' + antivirus_rarity )
+
+  let cracker_staked = document.createElement('div');
+  document.getElementById('listContainer').appendChild(cracker_staked);
+  cracker_staked.innerHTML += ('Cracker : ' + cracker_rarity )
 
 
   let total_HWB_hour = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_HWB_hour);
-  total_HWB_hour.innerHTML += ('HWB Per Hour: ' + (total_HWB_per_hour + (total_HWB_per_hour * (slot_bonus / 100))) )
+  total_HWB_hour.innerHTML += ('HWB Per Hour : ' + (total_HWB_per_hour + (total_HWB_per_hour * (slot_bonus / 100))) )
   let total_HWB_day = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_HWB_day);
-  total_HWB_day.innerHTML += ('HWB Per Day: ' + (total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100))))
+  total_HWB_day.innerHTML += ('HWB Per Day : ' + (total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100))))
 
   let total_WAX_hour = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_WAX_hour);
-  total_WAX_hour.innerHTML += ('WAX Per Hour: ' + Math.round(((total_HWB_per_hour + (total_HWB_per_hour * (slot_bonus / 100))) * hwb_val),2) )
+  total_WAX_hour.innerHTML += ('WAX Per Hour : ' + Math.round(((total_HWB_per_hour + (total_HWB_per_hour * (slot_bonus / 100))) * hwb_val),2) )
   let total_WAX_day = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_WAX_day);
-  total_WAX_day.innerHTML += ('WAX Per Day: ' + Math.round(((total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100))) * hwb_val),2))
+  total_WAX_day.innerHTML += ('WAX Per Day : ' + Math.round(((total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100))) * hwb_val),2))
 
   let message = document.createElement('p');
   document.getElementById('listContainerDiv').appendChild(message);
