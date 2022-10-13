@@ -178,6 +178,8 @@ body {
 .container { 
   padding-inline: 15px;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
  }
 
 .banner_container{
