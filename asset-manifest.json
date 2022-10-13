@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hackersworld-toolkit.github.io/static/css/main.fc3c7526.chunk.css",
+    "main.css": "/hackersworld-toolkit.github.io/static/css/main.b6e56ccf.chunk.css",
     "main.js": "/hackersworld-toolkit.github.io/static/js/main.634b01f4.chunk.js",
     "main.js.map": "/hackersworld-toolkit.github.io/static/js/main.634b01f4.chunk.js.map",
     "runtime-main.js": "/hackersworld-toolkit.github.io/static/js/runtime-main.8768dd14.js",
@@ -8,15 +8,15 @@
     "static/js/2.f4aefa36.chunk.js": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js",
     "static/js/2.f4aefa36.chunk.js.map": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js.map",
     "index.html": "/hackersworld-toolkit.github.io/index.html",
-    "precache-manifest.9e97a692d5cf2f838b38279310ddab43.js": "/hackersworld-toolkit.github.io/precache-manifest.9e97a692d5cf2f838b38279310ddab43.js",
+    "precache-manifest.94f943f09315907cf9c0e6ec5289bc72.js": "/hackersworld-toolkit.github.io/precache-manifest.94f943f09315907cf9c0e6ec5289bc72.js",
     "service-worker.js": "/hackersworld-toolkit.github.io/service-worker.js",
-    "static/css/main.fc3c7526.chunk.css.map": "/hackersworld-toolkit.github.io/static/css/main.fc3c7526.chunk.css.map",
+    "static/css/main.b6e56ccf.chunk.css.map": "/hackersworld-toolkit.github.io/static/css/main.b6e56ccf.chunk.css.map",
     "static/js/2.f4aefa36.chunk.js.LICENSE.txt": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8768dd14.js",
     "static/js/2.f4aefa36.chunk.js",
-    "static/css/main.fc3c7526.chunk.css",
+    "static/css/main.b6e56ccf.chunk.css",
     "static/js/main.634b01f4.chunk.js"
   ]
 }
