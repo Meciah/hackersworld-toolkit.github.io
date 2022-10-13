@@ -55,7 +55,7 @@ const update = function(newActive) {
   arr.push(next)
   // arr.push(first)
   // arr.push(last)
-  console.log(arr)
+  //console.log(arr)
   //current.classList.remove('carousel__item_active');
   
   arr.forEach(item => {
@@ -162,7 +162,7 @@ input.addEventListener("keypress", function(event) {
     event.preventDefault();
     // Trigger the button element with a click
     document.getElementById("submit_btn").click();
-    console.log('success',input.value)
+    //console.log('success',input.value)
     getTableRows(input.value)
     getTableRowsUser(input.value)
     input.disabled = true;
@@ -171,7 +171,7 @@ input.addEventListener("keypress", function(event) {
 });
 
 document.getElementById('submit_btn').addEventListener('click', function() {
-  console.log('success',input.value)
+  //console.log('success',input.value)
   makeList(getTableRows(input.value))
   getTableRowsUser(input.value)
   input.disabled = true;
@@ -193,10 +193,10 @@ async function makeList(listData) {
       // do stuff with responseJSON here...
       result_val = responseJSON
     });;
-    //console.log(result_val)
+    ////console.log(result_val)
     let myArray = Object.entries(result_val);
     
-    //console.log((myArray));
+    ////console.log((myArray));
   let table_titles = ['Asset ID', 'Template ID', 'Rarity', 'Slot Bonus','Earnings / HR', 'Earnings / Day']
   let listArray = []
   let templateArray = []
@@ -208,11 +208,11 @@ async function makeList(listData) {
   let access_pass = false
   let total_HWB_per_hour = 0
   let total_HWB_per_day = 0
-  let firewall_rarity = ''
-  let antivirus_rarity = ''
-  let cracker_rarity = ''
-  //console.log(Object.keys(listData).length)
-  //console.log(myArray.length)
+  let firewall_rarity = 'None'
+  let antivirus_rarity = 'None'
+  let cracker_rarity = 'None'
+  ////console.log(Object.keys(listData).length)
+  ////console.log(myArray.length)
   for (let i = 0;i<myArray.length;i++){
     if(myArray[i][1].schema_name === 'pass'){
       access_pass = true;
@@ -232,7 +232,7 @@ async function makeList(listData) {
       continue;
     }
     else{
-      console.log(myArray[i][1])
+      ////console.log(myArray[i][1])
       listArray.push(myArray[i][1].asset_id)
       templateArray.push(myArray[i][1].template_id)
       if(myArray[i][1].template_id == '583358'){
@@ -261,7 +261,7 @@ async function makeList(listData) {
     }
 
   }
-  console.log(access_pass)
+  //console.log(access_pass)
   if (firewall_rarity == 583353){
     firewall_rarity = 'Common'
   }
@@ -371,7 +371,7 @@ async function makeList(listData) {
   for(let i = 0;i< listArray.length;i++){
     slot_array.push(slot_bonus + '%')
   }
-  console.log(listArray)
+  //console.log(listArray)
   function add(accumulator, a) {
     return accumulator + a;
   }
@@ -383,7 +383,7 @@ async function makeList(listData) {
   document.getElementById('listContainerHead').appendChild(title);
   
   table_titles.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('th');
       title.appendChild(li);
       
@@ -397,7 +397,7 @@ async function makeList(listData) {
   document.getElementById('listContainer').appendChild(ul);
   
   listArray.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('td');
       ul.appendChild(li);
       
@@ -408,7 +408,7 @@ async function makeList(listData) {
 
   document.getElementById('listContainer').appendChild(ull);
   templateArray.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('td');
       ull.appendChild(li);
   
@@ -419,7 +419,7 @@ async function makeList(listData) {
 
   document.getElementById('listContainer').appendChild(ulll);
   rarityArray.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('td');
       ulll.appendChild(li);
   
@@ -429,7 +429,7 @@ async function makeList(listData) {
 
   document.getElementById('listContainer').appendChild(ullll);
   slot_array.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('td');
       ullll.appendChild(li);
   
@@ -440,7 +440,7 @@ async function makeList(listData) {
 
   document.getElementById('listContainer').appendChild(ulllll);
   hourly_profit.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('td');
       ulllll.appendChild(li);
   
@@ -451,7 +451,7 @@ async function makeList(listData) {
 
   document.getElementById('listContainer').appendChild(ullllll);
   daily_profit.forEach(item => {
-    console.log(item)
+    //console.log(item)
       let li = document.createElement('td');
       ullllll.appendChild(li);
   
@@ -520,10 +520,10 @@ async function getTableRows(id){
     }),})
       //fetch("https://wax.eosphere.io/v1/chain/get_table_rows?code=hackersworld&table=stakedtools&scope=4r1fy.wam")
     result = await result.json();
-    console.log(result.rows);
+    //console.log(result.rows);
   } catch(e) {
-    console.log("stakedtools:")
-    console.log(result);
+    //console.log("stakedtools:")
+    //console.log(result);
   }
   return result.rows;
 }
@@ -552,7 +552,7 @@ async function getTableRowsUser(id){
     }),})
       //fetch("https://wax.eosphere.io/v1/chain/get_table_rows?code=hackersworld&table=stakedtools&scope=4r1fy.wam")
     result = await result.json();
-    console.log(result.rows[0]);
+    //console.log(result.rows[0]);
   } catch(e) {
 
   }
@@ -568,7 +568,7 @@ async function getHWB() {
     hwb_price = all_tokens
     return all_tokens.last_price;
   }catch(e) {
-    console.log('Error: ', e)
+    //console.log('Error: ', e)
     return ('Error:' + e)
   }
 }
@@ -581,7 +581,7 @@ async function sendHWB() {
     }
   
   }catch(e) {
-    console.log('Error: ', e)
+    //console.log('Error: ', e)
     return ('Error:' + e)
   }
 }
