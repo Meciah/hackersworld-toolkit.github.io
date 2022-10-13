@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hackersworld-toolkit.github.io/static/css/main.0e50380b.chunk.css",
-    "main.js": "/hackersworld-toolkit.github.io/static/js/main.5cd0ca37.chunk.js",
-    "main.js.map": "/hackersworld-toolkit.github.io/static/js/main.5cd0ca37.chunk.js.map",
+    "main.css": "/hackersworld-toolkit.github.io/static/css/main.134faf99.chunk.css",
+    "main.js": "/hackersworld-toolkit.github.io/static/js/main.0c9d1e5b.chunk.js",
+    "main.js.map": "/hackersworld-toolkit.github.io/static/js/main.0c9d1e5b.chunk.js.map",
     "runtime-main.js": "/hackersworld-toolkit.github.io/static/js/runtime-main.8768dd14.js",
     "runtime-main.js.map": "/hackersworld-toolkit.github.io/static/js/runtime-main.8768dd14.js.map",
     "static/js/2.f4aefa36.chunk.js": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js",
     "static/js/2.f4aefa36.chunk.js.map": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js.map",
     "index.html": "/hackersworld-toolkit.github.io/index.html",
-    "precache-manifest.bb45ecf8bfe14c4cb3a56c0e06f16294.js": "/hackersworld-toolkit.github.io/precache-manifest.bb45ecf8bfe14c4cb3a56c0e06f16294.js",
+    "precache-manifest.e707b2db75e5925218e5f6dde45f6a5f.js": "/hackersworld-toolkit.github.io/precache-manifest.e707b2db75e5925218e5f6dde45f6a5f.js",
     "service-worker.js": "/hackersworld-toolkit.github.io/service-worker.js",
-    "static/css/main.0e50380b.chunk.css.map": "/hackersworld-toolkit.github.io/static/css/main.0e50380b.chunk.css.map",
+    "static/css/main.134faf99.chunk.css.map": "/hackersworld-toolkit.github.io/static/css/main.134faf99.chunk.css.map",
     "static/js/2.f4aefa36.chunk.js.LICENSE.txt": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8768dd14.js",
     "static/js/2.f4aefa36.chunk.js",
-    "static/css/main.0e50380b.chunk.css",
-    "static/js/main.5cd0ca37.chunk.js"
+    "static/css/main.134faf99.chunk.css",
+    "static/js/main.0c9d1e5b.chunk.js"
   ]
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ff6e291bcd434be52c667d580dac641",
+    "revision": "fab6471bd98889c3aef4d9415a811b1b",
     "url": "/hackersworld-toolkit.github.io/index.html"
   },
   {
-    "revision": "cdcd8f8dbf2406cf64e2",
-    "url": "/hackersworld-toolkit.github.io/static/css/main.0e50380b.chunk.css"
+    "revision": "cba103c7d9aa1bb8f61e",
+    "url": "/hackersworld-toolkit.github.io/static/css/main.134faf99.chunk.css"
   },
   {
     "revision": "61f53813b76f8d2e6c4d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hackersworld-toolkit.github.io/static/js/2.f4aefa36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cdcd8f8dbf2406cf64e2",
-    "url": "/hackersworld-toolkit.github.io/static/js/main.5cd0ca37.chunk.js"
+    "revision": "cba103c7d9aa1bb8f61e",
+    "url": "/hackersworld-toolkit.github.io/static/js/main.0c9d1e5b.chunk.js"
   },
   {
     "revision": "0f39283cd49d67b1bb66",
