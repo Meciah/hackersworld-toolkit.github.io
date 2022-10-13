@@ -1647,7 +1647,10 @@ address.footer-contact-link { max-width: 30ch; }
 
   .header.active { top: -60px; }
 
-  .header > .container { gap: 50px; }
+  .header > .container { 
+    grid-gap: 0px !important;
+    gap: 0px !important;
+  }
 
   .nav-toggle-btn { display: none; }
 
