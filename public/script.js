@@ -233,13 +233,13 @@ async function makeList(listData) {
     }
     else{
       //console.log(myArray[i][1])
-      
-      listArray.push(myArray[i][1].asset_id)
-      templateArray.push(myArray[i][1].template_id)
       if(myArray[i][1].template_id == '610028' || myArray[i][1].template_id == '610030' || myArray[i][1].template_id == '610032'|| myArray[i][1].template_id == '610033'){
         continue;
       }
-      else if(myArray[i][1].template_id == '583358'){
+      listArray.push(myArray[i][1].asset_id)
+      templateArray.push(myArray[i][1].template_id)
+      
+      if(myArray[i][1].template_id == '583358'){
         rarityArray.push('Common')
         hourly_profit.push(0.3)
         daily_profit.push(7.2)
