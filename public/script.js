@@ -197,9 +197,10 @@ async function makeList(listData) {
     let myArray = Object.entries(result_val);
     
     ////console.log((myArray));
-  let table_titles = ['Asset ID', 'Template ID', 'Rarity', 'Slot Bonus','Earnings / HR', 'Earnings / Day']
+  let table_titles = ['Asset ID', 'Template ID', 'Rarity', 'Slot Bonus','Multiplier','Earnings / HR', 'Earnings / Day']
   let listArray = []
   let templateArray = []
+  let multi_array = []
   let rarityArray = []
   let hourly_profit = []
   let daily_profit = []
@@ -375,10 +376,31 @@ async function makeList(listData) {
   for(let i = 0;i< listArray.length;i++){
     slot_array.push(slot_bonus + '%')
   }
+  for(let i = 0;i< listArray.length;i++){
+    let result_val= ''
+      //fetch("https://wax.eosphere.io/v1/chain/get_table_rows?code=hackersworld&table=stakedtools&scope=4r1fy.wam")
+      try{
+        let result = await getVirusMultiplier(listArray[i]).then((responseJSON) => {
+          // do stuff with responseJSON here...
+          result_val = responseJSON
+        });;
+      }
+      catch(e){
+        result_val = 100
+        console.log(e)
+      }
+    multi_array.push(result_val)
+    //console.log(result_val)
+  }
   //console.log(listArray)
   function add(accumulator, a) {
     return accumulator + a;
   }
+  for(let i = 0;i< hourly_profit.length;i++){
+      hourly_profit[i] = hourly_profit[i] * (multi_array[i] / 100)
+      daily_profit[i] = daily_profit[i] * (multi_array[i] / 100)
+  }
+  
   total_HWB_per_hour= hourly_profit.reduce(add, 0);
   total_HWB_per_day = daily_profit.reduce(add, 0);
 
@@ -440,6 +462,17 @@ async function makeList(listData) {
       li.innerHTML += item;
   });
 
+  let multi = document.createElement('tr');
+
+  document.getElementById('listContainer').appendChild(multi);
+  multi_array.forEach(item => {
+    //console.log(item)
+      let li = document.createElement('td');
+      multi.appendChild(li);
+  
+      li.innerHTML += item;
+  });
+
   let ulllll = document.createElement('tr');
 
   document.getElementById('listContainer').appendChild(ulllll);
@@ -482,10 +515,10 @@ async function makeList(listData) {
 
   let total_HWB_hour = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_HWB_hour);
-  total_HWB_hour.innerHTML += ('HWB Per Hour : ' + (total_HWB_per_hour + (total_HWB_per_hour * (slot_bonus / 100))) )
+  total_HWB_hour.innerHTML += ('HWB Per Hour : ' + Math.round((total_HWB_per_hour + (total_HWB_per_hour * (slot_bonus / 100)))))
   let total_HWB_day = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_HWB_day);
-  total_HWB_day.innerHTML += ('HWB Per Day : ' + (total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100))))
+  total_HWB_day.innerHTML += ('HWB Per Day : ' + Math.round((total_HWB_per_day + (total_HWB_per_day * (slot_bonus / 100)))))
 
   let total_WAX_hour = document.createElement('div');
   document.getElementById('listContainer').appendChild(total_WAX_hour);
@@ -496,7 +529,7 @@ async function makeList(listData) {
 
   let message = document.createElement('p');
   document.getElementById('listContainerDiv').appendChild(message);
-  message.innerHTML += '* Total Earnings Assumes the Base Multiplier of All Viruses is 100%, and there are no viruses installed on your system.'
+  message.innerHTML += '* Total Earnings Assumes there are no viruses installed on your system.'
 }
 
 
@@ -591,7 +624,7 @@ async function getVirusMultiplier(id){
   } catch(e) {
 
   }
-  return result.rows[0];
+  return result.rows[0].multiplier;
 }
 
 
