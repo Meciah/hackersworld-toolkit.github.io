@@ -1205,21 +1205,21 @@ address.footer-contact-link { max-width: 30ch; }
   min-width: 150px;
   margin: 10px 10px;
 }
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
   .list_container table th  {
     display: inline-block;
     min-width: 100px;
     margin: 10px 10px;
   }
 }
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
   .list_container table td  {
     display: block;
     margin: 10px;
     width: 100px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .list_container table th  {
     font-size: 10px;
     display: inline-block;
@@ -1227,7 +1227,7 @@ address.footer-contact-link { max-width: 30ch; }
     margin: 10px 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .list_container table td  {
     font-size: 10px;
     display: block;
@@ -1236,7 +1236,7 @@ address.footer-contact-link { max-width: 30ch; }
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 630px) {
   .list_container table th  {
     font-size: 9px;
     display: inline-block;
@@ -1244,7 +1244,7 @@ address.footer-contact-link { max-width: 30ch; }
     margin: 10px 10px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 630px) {
   .list_container table td  {
     font-size: 10px;
     display: block;
@@ -1256,20 +1256,20 @@ address.footer-contact-link { max-width: 30ch; }
     font-size: 14px;
   }
 }
-  @media (max-width: 440px) {
+  @media (max-width: 515px) {
     .list_container table th  {
-      font-size: 8px;
+      font-size: 7px;
       display: inline-block;
-      min-width: 35px;
+      min-width: 30px;
       margin: 7px;
     }
   }
-  @media (max-width: 440px) {
+  @media (max-width: 515px) {
     .list_container table td  {
-      font-size: 7.5px;
+      font-size: 7px;
       display: block;
       margin: 6px;
-      width: 43px;
+      width: 40px;
       
     }
     .list_container div{
