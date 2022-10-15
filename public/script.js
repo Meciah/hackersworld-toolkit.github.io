@@ -232,7 +232,7 @@ async function makeList(listData) {
       continue;
     }
     else{
-      ////console.log(myArray[i][1])
+      /////console.log(myArray[i][1])
       listArray.push(myArray[i][1].asset_id)
       templateArray.push(myArray[i][1].template_id)
       if(myArray[i][1].template_id == '610028' || myArray[i][1].template_id == '610030' || myArray[i][1].template_id == '610032'|| myArray[i][1].template_id == '610033'){
