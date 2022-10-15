@@ -235,7 +235,10 @@ async function makeList(listData) {
       ////console.log(myArray[i][1])
       listArray.push(myArray[i][1].asset_id)
       templateArray.push(myArray[i][1].template_id)
-      if(myArray[i][1].template_id == '583358'){
+      if(myArray[i][1].template_id == '610028' || myArray[i][1].template_id == '610030' || myArray[i][1].template_id == '610032'|| myArray[i][1].template_id == '610033'){
+        continue;
+      }
+      else if(myArray[i][1].template_id == '583358'){
         rarityArray.push('Common')
         hourly_profit.push(0.3)
         daily_profit.push(7.2)
@@ -544,6 +547,37 @@ async function getTableRowsUser(id){
         'table': 'users',
         'scope': 'hackersworld',
         "limit": "2",
+        "index_position": "",
+        "key_type": "",
+        "encode_type": "",
+        "upper_bound": '',
+        "lower_bound": id
+    }),})
+      //fetch("https://wax.eosphere.io/v1/chain/get_table_rows?code=hackersworld&table=stakedtools&scope=4r1fy.wam")
+    result = await result.json();
+    //console.log(result.rows[0]);
+  } catch(e) {
+
+  }
+  return result.rows[0];
+}
+
+async function getVirusMultiplier(id){
+  let result;
+
+  try {
+    result = await fetch('https://wax.blokcrafters.io/v1/chain/get_table_rows', {
+      method: 'POST',
+      headers: {
+        Accept: 'application.json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'json': true,  
+        'code': 'hackersworld',
+        'table': 'viruses',
+        'scope': 'hackersworld',
+        "limit": "1",
         "index_position": "",
         "key_type": "",
         "encode_type": "",
