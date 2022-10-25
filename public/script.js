@@ -211,7 +211,10 @@ async function makeList(listData) {
   let total_HWB_per_day = 0
   let firewall_rarity = 'None'
   let antivirus_rarity = 'None'
+  let antivirus_rarity2 = 'None'
   let cracker_rarity = 'None'
+  let rw_counter = 0
+  let anti_counter = 1
   ////console.log(Object.keys(listData).length)
   ////console.log(myArray.length)
   for (let i = 0;i<myArray.length;i++){
@@ -223,6 +226,10 @@ async function makeList(listData) {
     }
     if(myArray[i][1].schema_name === 'antivirus'){
       antivirus_rarity = myArray[i][1].template_id;
+      anti_counter += 1
+    }
+    if(myArray[i][1].schema_name === 'antivirus' && anti_counter == 2){
+      antivirus_rarity2 = myArray[i][1].template_id;
     }
     if(myArray[i][1].schema_name === 'cracker'){
       cracker_rarity = myArray[i][1].template_id;
@@ -234,9 +241,9 @@ async function makeList(listData) {
     }
     else{
       //console.log(myArray[i][1])
-      if(myArray[i][1].template_id == '610028' || myArray[i][1].template_id == '610030' || myArray[i][1].template_id == '610032'|| myArray[i][1].template_id == '610033'){
-        continue;
-      }
+      // if(myArray[i][1].template_id == '610028' || myArray[i][1].template_id == '610030' || myArray[i][1].template_id == '610032'|| myArray[i][1].template_id == '610033'){
+      //   continue;
+      // }
       listArray.push(myArray[i][1].asset_id)
       templateArray.push(myArray[i][1].template_id)
       
@@ -263,6 +270,35 @@ async function makeList(listData) {
         hourly_profit.push(27)
         daily_profit.push(648)
       }
+      else if(myArray[i][1].template_id == '610028'){
+        rarityArray.push('Common RW')
+        hourly_profit.push(0.41)
+        daily_profit.push(10)
+        rw_counter += 1
+      }
+      else if(myArray[i][1].template_id == '610030'){
+        rarityArray.push('Uncommon RW ')
+        hourly_profit.push(1.25)
+        daily_profit.push(30)
+        rw_counter += 1
+      }
+      else if(myArray[i][1].template_id == '610032'){
+        rarityArray.push('Rare RW ')
+        hourly_profit.push(3.75)
+        daily_profit.push(90)
+        rw_counter += 1
+      }
+      else if(myArray[i][1].template_id == '610033'){
+        rarityArray.push('Epic RW ')
+        hourly_profit.push(11.25)
+        daily_profit.push(270)
+        rw_counter += 1
+      }
+      // else if(myArray[i][1].template_id == '610033'){
+      //   rarityArray.push('Legendary RW ')
+      //   hourly_profit.push(27)
+      //   daily_profit.push(648)
+      // }
     }
 
   }
@@ -299,6 +335,22 @@ async function makeList(listData) {
     antivirus_rarity = 'Legendary'
   }
 
+  if (antivirus_rarity2 == 583343){
+    antivirus_rarity2 = 'Common'
+  }
+  if (antivirus_rarity2 == 583344){
+    antivirus_rarity2 = 'Uncommon'
+  }
+  if (antivirus_rarity2 == 583345){
+    antivirus_rarity2 = 'Rare'
+  }
+  if (antivirus_rarity2 == 583346){
+    antivirus_rarit2 = 'Epic'
+  }
+  if (antivirus_rarity2 == 583347){
+    antivirus_rarity2 = 'Legendary'
+  }
+
   if (cracker_rarity == 583348){
     cracker_rarity = 'Common'
   }
@@ -317,64 +369,70 @@ async function makeList(listData) {
 
 
   if (access_pass == true){
-    if(listArray.length == 5){
+    if(listArray.length - rw_counter == 5){
       slot_bonus = 0
     }
-    if(listArray.length == 6){
+    if(listArray.length - rw_counter == 6){
       slot_bonus = 1
     }
-    if(listArray.length == 7){
+    if(listArray.length - rw_counter == 7){
       slot_bonus = 2.5
     }
-    if(listArray.length == 8){
+    if(listArray.length - rw_counter == 8){
       slot_bonus = 4.5
     }
-    if(listArray.length == 9){
+    if(listArray.length - rw_counter == 9){
       slot_bonus = 7
     }
-    if(listArray.length == 10){
+    if(listArray.length - rw_counter == 10){
       slot_bonus = 10
     }
-    if(listArray.length == 11){
+    if(listArray.length - rw_counter == 11){
       slot_bonus = 13.5
     }
-    if(listArray.length == 12){
+    if(listArray.length - rw_counter == 12){
       slot_bonus = 17.5
     }
-    if(listArray.length == 13){
+    if(listArray.length - rw_counter == 13){
       slot_bonus = 22
     }
   }else if(access_pass == false){
-    if(listArray.length == 3){
+    if(listArray.length - rw_counter == 3){
       slot_bonus = 0
     }
-    if(listArray.length == 4){
+    if(listArray.length - rw_counter == 4){
       slot_bonus = 1
     }
-    if(listArray.length == 5){
+    if(listArray.length - rw_counter == 5){
       slot_bonus = 2.5
     }
-    if(listArray.length == 6){
+    if(listArray.length - rw_counter == 6){
       slot_bonus = 4.5
     }
-    if(listArray.length == 7){
+    if(listArray.length - rw_counter == 7){
       slot_bonus = 7
     }
-    if(listArray.length == 8){
+    if(listArray.length - rw_counter == 8){
       slot_bonus = 10
     }
-    if(listArray.length == 9){
+    if(listArray.length - rw_counter == 9){
       slot_bonus = 13.5
     }
-    if(listArray.length == 10){
+    if(listArray.length - rw_counter == 10){
       slot_bonus = 17.5
     }
-    if(listArray.length == 12){
+    if(listArray.length - rw_counter == 12){
       slot_bonus = 22
     }
   }
   for(let i = 0;i< listArray.length;i++){
-    slot_array.push(slot_bonus + '%')
+    if(templateArray[i] == '610028' || templateArray[i] == '610030' || templateArray[i] == '610032'|| templateArray[i] == '610033'){
+      slot_array.push(0 + '%');
+      }
+      else{
+        slot_array.push(slot_bonus + '%');
+      }
+    
   }
   for(let i = 0;i< listArray.length;i++){
     let result_val= ''
@@ -397,8 +455,8 @@ async function makeList(listData) {
     return accumulator + a;
   }
   for(let i = 0;i< hourly_profit.length;i++){
-      hourly_profit[i] = hourly_profit[i] * (multi_array[i] / 100)
-      daily_profit[i] = daily_profit[i] * (multi_array[i] / 100)
+      hourly_profit[i] = Math.round(hourly_profit[i] * (multi_array[i] / 100))
+      daily_profit[i] = Math.round(daily_profit[i] * (multi_array[i] / 100))
   }
   
   total_HWB_per_hour= hourly_profit.reduce(add, 0);
@@ -506,7 +564,11 @@ async function makeList(listData) {
 
   let antivirus_staked = document.createElement('div');
   document.getElementById('listContainer').appendChild(antivirus_staked);
-  antivirus_staked.innerHTML += ('Antivirus : ' + antivirus_rarity )
+  antivirus_staked.innerHTML += ('Antivirus 1 : ' + antivirus_rarity )
+
+  let antivirus_staked2 = document.createElement('div');
+  document.getElementById('listContainer').appendChild(antivirus_staked2);
+  antivirus_staked2.innerHTML += ('Antivirus 2 : ' + antivirus_rarity2 )
 
   let cracker_staked = document.createElement('div');
   document.getElementById('listContainer').appendChild(cracker_staked);
