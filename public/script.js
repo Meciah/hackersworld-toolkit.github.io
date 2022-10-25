@@ -436,6 +436,11 @@ async function makeList(listData) {
   }
   for(let i = 0;i< listArray.length;i++){
     let result_val= ''
+    if(templateArray[i] == '610028' || templateArray[i] == '610030' || templateArray[i] == '610032'|| templateArray[i] == '610033'){
+      result_val= 100
+      multi_array.push(result_val)
+      continue;
+      }
       //fetch("https://wax.eosphere.io/v1/chain/get_table_rows?code=hackersworld&table=stakedtools&scope=4r1fy.wam")
       try{
         let result = await getVirusMultiplier(listArray[i]).then((responseJSON) => {
