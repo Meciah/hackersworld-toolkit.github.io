@@ -23,9 +23,7 @@ function App({ query }) {
 
 
     useEffect (() =>{
-      if(window && window.runScript){
-        window.runScript();
-      }
+      
 
   }, [])
 
