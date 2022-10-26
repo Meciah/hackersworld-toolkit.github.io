@@ -174,7 +174,51 @@ body {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
-
+.img_container{
+  margin: auto;
+  margin-top:100px;
+  margin-bottom:100px;
+  width: 800px;
+}
+@media screen and (max-width: 830px) {
+  .img_container{
+    width: 600px;
+  }
+  .img_container img{
+    width: 600px !important;
+  }
+}
+@media screen and (max-width: 630px) {
+  .img_container{
+    width: 450px;
+  }
+  .img_container img{
+    width: 450px !important;
+  }
+}
+@media screen and (max-width: 475px) {
+  .img_container{
+    width: 350px;
+  }
+  .img_container img{
+    width: 350px !important;
+  }
+}
+.img_container h1{
+  margin: auto;
+  margin-top:50px;
+  color: #0F0;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.img_container img{
+  margin: auto;
+  margin-top:20px;
+  width: 800px;
+}
 .container { 
   padding-inline: 15px;
   width: 100%;
@@ -1711,6 +1755,8 @@ address.footer-contact-link { max-width: 30ch; }
     text-transform:uppercase;
     transition:0.5s;
   }
+
+
   
   .navbar ul:hover li a{
     transform:scale(1.2);
