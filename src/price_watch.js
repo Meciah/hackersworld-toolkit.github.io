@@ -221,7 +221,7 @@ function Price({ }) {
     });
     async function getAH_price(template_id) {
         try{
-          let price = await fetch("http://wax-atomic-api.eosphere.io/atomicmarket/v2/sales?state=1&template_id=" + template_id + "&page=1&limit=1&max_assets=1&order=asc&sort=price");
+          let price = await fetch("https://wax-atomic-api.eosphere.io/atomicmarket/v2/sales?state=1&template_id=" + template_id + "&page=1&limit=1&max_assets=1&order=asc&sort=price");
           price = await price.json();
           //console.log(price)
           if(price.data.length == 0){
