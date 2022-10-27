@@ -4,6 +4,7 @@ import './assets/css/style.css';
 import { HashRouter, Link, Routes, Route } from 'react-router-dom';
 import Info from './info.js';
 import Main from './main.js';
+import Price from './price_watch.js';
 
 function App({ query }) {
 
@@ -79,7 +80,7 @@ function App({ query }) {
       
 
   console.log(waxPrice)
-
+  
 
   return (
     
@@ -87,6 +88,7 @@ function App({ query }) {
       <Routes>
         <Route exact path="/" element={<Main/>} />
         <Route path="/info" element={<Info/>} />
+        <Route path="/price" element={<Price/>} />
         {/* <Route path="/menu2/:id" component={Menu2} />
         <Route path="/menu3/:id1/:id2" component={Menu3} /> */}
       </Routes>

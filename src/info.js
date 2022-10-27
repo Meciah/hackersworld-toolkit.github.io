@@ -125,6 +125,10 @@ function Info({ }) {
         </li>
 
         <li className="navbar-item">
+            <Link to="/price" className="navbar-link" data-nav-link>Price Watch</Link>
+        </li>
+
+        <li className="navbar-item">
           <a href="https://wax.alcor.exchange/trade/hwb-hackerstoken_wax-eosio.token" target="_blank" className="navbar-link" data-nav-link>HWB/WAX: {hwbPrice}</a>
         </li>
 
