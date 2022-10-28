@@ -250,7 +250,7 @@ function Price({ }) {
                 //
                 //setMyArray(price)
             });
-            await delay(500)
+            await delay(250)
         }
         copyArray()
     }
