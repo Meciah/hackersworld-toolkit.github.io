@@ -344,7 +344,7 @@ window.runScript = function (){
       antivirus_rarity2 = 'Rare'
     }
     if (antivirus_rarity2 == 583346){
-      antivirus_rarit2 = 'Epic'
+      antivirus_rarity2 = 'Epic'
     }
     if (antivirus_rarity2 == 583347){
       antivirus_rarity2 = 'Legendary'
