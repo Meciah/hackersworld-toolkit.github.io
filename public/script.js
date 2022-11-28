@@ -293,11 +293,12 @@ window.runScript = function (){
           daily_profit.push(270)
           rw_counter += 1
         }
-        // else if(myArray[i][1].template_id == '610033'){
-        //   rarityArray.push('Legendary RW ')
-        //   hourly_profit.push(27)
-        //   daily_profit.push(648)
-        // }
+        else if(myArray[i][1].template_id == '610034'){
+          rarityArray.push('Legendary RW ')
+          hourly_profit.push(33.75)
+          daily_profit.push(810)
+          rw_counter += 1
+        }
       }
   
     }
@@ -425,7 +426,7 @@ window.runScript = function (){
       }
     }
     for(let i = 0;i< listArray.length;i++){
-      if(templateArray[i] == '610028' || templateArray[i] == '610030' || templateArray[i] == '610032'|| templateArray[i] == '610033'){
+      if(templateArray[i] == '610028' || templateArray[i] == '610030' || templateArray[i] == '610032'|| templateArray[i] == '610033'|| templateArray[i] == '610034'){
         slot_array.push(0 + '%');
         }
         else{
@@ -435,7 +436,7 @@ window.runScript = function (){
     }
     for(let i = 0;i< listArray.length;i++){
       let result_val= ''
-      if(templateArray[i] == '610028' || templateArray[i] == '610030' || templateArray[i] == '610032'|| templateArray[i] == '610033'){
+      if(templateArray[i] == '610028' || templateArray[i] == '610030' || templateArray[i] == '610032'|| templateArray[i] == '610033' || templateArray[i] == '610034'){
         result_val= 100
         multi_array.push(result_val)
         continue;

@@ -62,7 +62,7 @@ function Main({ query }) {
             wax_price = all_tokens
             console.log(wax_price.last_price)
             if (all_tokens != undefined) {
-              sethwbPrice(Math.round(wax_price.last_price* 100) / 100)
+              sethwbPrice(wax_price.last_price* 100 / 100)
             }
             return all_tokens.last_price;
           }catch(e) {
