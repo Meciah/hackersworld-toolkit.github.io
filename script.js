@@ -367,7 +367,7 @@ window.runScript = function (){
       cracker_rarity = 'Legendary'
     }
   
-  
+  console.log(listArray)
     if (access_pass == true){
       if(listArray.length - rw_counter == 5){
         slot_bonus = 0
@@ -396,6 +396,18 @@ window.runScript = function (){
       if(listArray.length - rw_counter == 13){
         slot_bonus = 22
       }
+      if(listArray.length - rw_counter == 14){
+        slot_bonus = 27
+      }
+      if(listArray.length - rw_counter == 15){
+        slot_bonus = 32.5
+      }
+      if(listArray.length - rw_counter == 16){
+        slot_bonus = 38.5
+      }
+      if(listArray.length - rw_counter == 17){
+        slot_bonus = 45
+      }
     }else if(access_pass == false){
       if(listArray.length - rw_counter == 3){
         slot_bonus = 0
@@ -423,6 +435,18 @@ window.runScript = function (){
       }
       if(listArray.length - rw_counter == 12){
         slot_bonus = 22
+      }
+      if(listArray.length - rw_counter == 13){
+        slot_bonus = 27
+      }
+      if(listArray.length - rw_counter == 14){
+        slot_bonus = 32.5
+      }
+      if(listArray.length - rw_counter == 15){
+        slot_bonus = 38.5
+      }
+      if(listArray.length - rw_counter == 16){
+        slot_bonus = 45
       }
     }
     for(let i = 0;i< listArray.length;i++){
